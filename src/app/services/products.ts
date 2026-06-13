@@ -1,4 +1,16 @@
-import { Service } from '@angular/core';
+import { inject, Service } from '@angular/core';
+import { Api } from './api';
+import { Observable } from 'rxjs';
+import { PaginationParams } from '../../types';
 
 @Service()
-export class Products {}
+export class Products {
+  private apiService = inject(Api);
+
+  getProducts = (url: string, params: PaginationParams): Observable<Products> => {
+    return this.apiService.get(url, {
+      params,
+      responseType: 'json',
+    });
+  };
+}
