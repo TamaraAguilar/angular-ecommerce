@@ -6,7 +6,7 @@ export interface Options {
     | {
         [header: string]: string | string[];
       };
-  observe: 'events';
+  observe: 'body';
   context?: HttpContext;
   params?:
     | HttpParams
