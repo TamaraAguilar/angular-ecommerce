@@ -1,1 +1,113 @@
-/* You can add global styles to this file, and also import other style files */
+// ======================== CSS RESET ===============================================
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ============================= END CSS RESET ========================================== */
+
+:root {
+  --clr-accent-300: hsl(34.3, 100%, 94.5%);
+  --clr-accent-400: hsl(41.6, 59.3%, 45.3%);
+  --clr-accent-500: hsl(0, 73.2%, 67.8%);
+  --clr-accent-600: hsl(171.4, 61.5%, 46.9%);
+
+  --clr-neutral-100: hsl(0 0% 100%);
+  --clr-neutral-200: hsl(220, 15.8%, 96.3%);
+  --clr-neutral-400: hsl(0, 0%, 62.4%);
+  --clr-neutral-800: hsl(0 0% 20%);
+  --clr-neutral-900: hsl(0 0% 10%);
+  --clr-neutral-1000: hsl(0 0% 0%);
+
+  --fs-400: 1.125rem;
+  --fs-500: 1.3125rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2.25rem;
+  --fs-800: 3rem;
+
+  --ff-base: 'Poppins', sans-serif;
+  --ff-accent: 'Montserrat', sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+body {
+  color: var(--clr-neutral-1000);
+  font-size: var(--fs-400);
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
